@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIFELINE-X | Botanical Life-Support</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #080808; color: #e0e0e0; display: flex; min-height: 100vh; }
+        
+        /* Sidebar Styling (Matched with Main Dashboard) */
+        .sidebar { width: 250px; background-color: #101010; border-right: 1px solid #00ff6633; padding: 20px; display: flex; flex-direction: column; gap: 30px; flex-shrink: 0; }
+        .logo { font-size: 1.5rem; font-weight: bold; color: #00ff66; text-shadow: 0 0 10px #00ff6688; letter-spacing: 2px; }
+        .nav-menu { list-style: none; display: flex; flex-direction: column; gap: 15px; }
+        .nav-item a { color: #888; text-decoration: none; font-size: 1rem; transition: 0.3s; display: block; padding: 10px; border-radius: 5px; }
+        .nav-item.active a, .nav-item a:hover { color: #00ff66; background-color: #00ff6615; border-left: 3px solid #00ff66; }
+
+        /* Main Content Layout */
+        .main-content { flex: 1; padding: 30px; display: flex; flex-direction: column; gap: 25px; }
+        .header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #222; padding-bottom: 15px; }
+        .astronaut-card { display: flex; flex-direction: column; }
+        .astronaut-name { font-size: 1.4rem; font-weight: 800; color: #00ff66; letter-spacing: 1.5px; text-shadow: 0 0 10px rgba(0, 255, 102, 0.5); text-transform: uppercase; }
+        .mission-title { font-size: 0.8rem; color: #888; letter-spacing: 2px; text-transform: uppercase; margin-top: 2px; }
+        .status-badge { background-color: #00ff6622; color: #00ff66; padding: 5px 12px; border: 1px solid #00ff66; border-radius: 20px; font-size: 0.85rem; }
+
+        /* Crops Grid (Matching Main Dashboard Card Style) */
+        .crops-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .crop-card { background-color: #121212; border: 1px solid #222; border-radius: 10px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); transition: border-color 0.3s; }
+        .crop-card:hover { border-color: #00ff6666; }
+        .crop-img { width: 100%; height: 180px; object-fit: cover; border-bottom: 1px solid #222; }
+        .crop-body { padding: 20px; display: flex; flex-direction: column; justify-content: space-between; flex: 1; }
+        .crop-badge { display: inline-block; font-size: 0.75rem; padding: 3px 8px; border-radius: 4px; background-color: #00ff6622; color: #00ff66; font-weight: bold; margin-bottom: 10px; width: fit-content; }
+        .crop-title { font-size: 1.1rem; color: #e0e0e0; margin-bottom: 8px; font-weight: bold; }
+        .crop-desc { font-size: 0.85rem; color: #888; line-height: 1.5; margin-bottom: 15px; }
+        .crop-specs { font-size: 0.82rem; color: #00ff66; background-color: #080808; border: 1px solid #222; padding: 8px 12px; border-radius: 6px; }
+    </style>
+</head>
+<body>
+
+   <aside class="sidebar">
+   <img src="c:\Users\salma\OneDrive\Desktop\life line x\white ll.png" class="project-logo-img">
+    <ul class="nav-menu">
+        <li class="nav-item"><a href="index.html">Vital Tracking</a></li>
+        <li class="nav-item active"><a href="space farming.html">Botanical Life Support</a></li>
+        <li class="nav-item"><a href="med log.html">Medical Logs</a></li>
+    </ul>
+</aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+        <header class="header">
+            <div class="astronaut-card">
+                <span class="astronaut-name">Dr. Salma</span>
+                <span class="mission-title">MISSION: LIFELINE-X SPACE TELEMETRY</span>
+            </div>
+            <div><span class="status-badge" id="systemStatus">● SYSTEM NORMAL</span></div>
+        </header>
+
+        <!-- Section Title -->
+        <h3 style="color: #00ff66; letter-spacing: 1px; font-size: 1.2rem;">🌿 ISS Veggie &amp; Advanced Plant Habitat (APH)</h3>
+
+        <!-- Crops Cards Grid (Matching Dashboard Cards) -->
+        <div class="crops-grid">
+            
+            <!-- Crop 1 -->
+            <div class="crop-card">
+                <img class="crop-img" src="https://images.unsplash.com/photo-1556801712-76c8eb07bbc9?auto=format&fit=crop&w=800&q=80" alt="Outredgeous Red Romaine">
+                <div class="crop-body">
+                    <div>
+                        <span class="crop-badge">NASA ISS VERIFIED</span>
+                        <h4 class="crop-title">Outredgeous Red Romaine</h4>
+                        <p class="crop-desc">High in Anthocyanins, Vitamin K &amp; C. Automatically deployed to combat oxidative stress and support SpO₂ levels.</p>
+                    </div>
+                    <div class="crop-specs">Harvest Cycle: 28–33 Days | Status: <strong>94% Mature</strong></div>
+                </div>
+            </div>
+
+            <!-- Crop 2 -->
+            <div class="crop-card">
+                <img class="crop-img" src="https://images.unsplash.com/photo-1592924357228-91a4daadcfea?auto=format&fit=crop&w=800&q=80" alt="Red Robin Dwarf Tomato">
+                <div class="crop-body">
+                    <div>
+                        <span class="crop-badge">RADIOPROTECTIVE CROP</span>
+                        <h4 class="crop-title">Red Robin Dwarf Tomato</h4>
+                        <p class="crop-desc">Concentrated Lycopene protects astronaut cardiovascular tissue and cellular DNA during acute solar flare radiation events.</p>
+                    </div>
+                    <div class="crop-specs">Harvest Cycle: 60–70 Days | Active Pods: <strong>12 Ready</strong></div>
+                </div>
+            </div>
+
+            <!-- Crop 3 -->
+            <div class="crop-card">
+                <img class="crop-img" src="https://images.unsplash.com/photo-1618375569909-3c8616cf7733?auto=format&fit=crop&w=800&q=80" alt="Space Basil & Mizuna">
+                <div class="crop-body">
+                    <div>
+                        <span class="crop-badge">FAST-CYCLE (10–14 DAYS)</span>
+                        <h4 class="crop-title">Space Basil &amp; Mizuna Greens</h4>
+                        <p class="crop-desc">Delivers essential iron, potassium, and calming aromatic compounds to stabilize cortisol and reduce mission stress.</p>
+                    </div>
+                    <div class="crop-specs">Harvest Cycle: 12 Days | Status: <strong>Ready Now</strong></div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+</html>
